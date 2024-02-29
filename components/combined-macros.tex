@@ -1,0 +1,415 @@
+\usepackage{etoolbox} \usepackage{xparse}
+
+
+\newcommand{\definedatasymbols}[2]{
+	\expandafter\newcommand\csname #1letter\endcsname{#2}
+	\expandafter\newcommand\csname #1space\endcsname{\symbfcal{\csname #1letter\endcsname}}
+	\expandafter\newcommand\csname #1rv\endcsname{\MakeUppercase{\csname #1letter\endcsname}}
+	\expandafter\newcommand\csname #1obs\endcsname{\MakeLowercase{\csname #1letter\endcsname}}
+	\expandafter\newcommand\csname #1vec\endcsname{\symbf{\csname #1rv\endcsname}}
+	\expandafter\newcommand\csname #1obsvec\endcsname{\symbf{\csname #1obs\endcsname}}
+	\expandafter\newcommand\csname #1mat\endcsname{\symbf{\csname #1rv\endcsname}}
+	\expandafter\newcommand\csname #1obsmat\endcsname{\csname #1rv\endcsname}
+	\expandafter\newcommand\csname #1po\endcsname{{\csname #1rv\endcsname}^*}
+}
+
+% Replace sym* with math* for pdflatex
+% \newbool{ifpdftex}
+% \booltrue{ifpdftex}
+% \ifbool{ifpdftex}{
+% 	\newcommand{\symbb}{\mathbb}
+% 	\newcommand{\symbf}{\boldsymbol}
+% 	\newcommand{\symbfcal}{\mathcal}
+% 	\newcommand{\symcal}{\mathcal}
+% 	\newcommand{\symup}{\mathrm}
+% }
+
+\definedatasymbols{covar}{X}
+\definedatasymbols{arm}{A}
+\definedatasymbols{resp}{Y}
+\definedatasymbols{hist}{H}
+\definedatasymbols{baseline}{U}
+\definedatasymbols{timevar}{V}
+\definedatasymbols{caltime}{T}
+
+\newcommand{\covardist}{\symbfcal{D}_{\covarrv}}
+
+\newcommand{\pout}{\resprv^{*}}
+
+\newcommand{\funclass}{\symbfcal{F}}
+\newcommand{\meanfun}{f}
+\newcommand{\meanfunvec}{\vectorsym{\meanfun}}
+\newcommand{\genericfun}{{g}}
+\newcommand{\linkfun}{{g}}
+
+\newcommand{\armparam}{\beta}
+
+\newcommand{\expresp}{\mu}
+
+\newcommand{\perfcutoff}{\delta}
+
+\newcommand{\covmat}{\Sigma}
+
+\newcommand{\err}{\epsilon}
+
+
+
+
+\newcommand{\obsindex}{t}
+\newcommand{\armindex}{k}
+\newcommand{\altarmindex}{j}
+\newcommand{\epochindex}{m}
+
+\newcommand{\maxobsindex}{\MakeUppercase{\obsindex}}
+\newcommand{\maxarmindex}{\MakeUppercase{\armindex}}
+\newcommand{\maxepochindex}{\MakeUppercase{\epochindex}}
+
+\newcommand{\clustindex}{i} \newcommand{\timeindex}{j} \newcommand{\indindex}{k}
+
+\newcommand{\maxclustindex}{\MakeUppercase{\clustindex}}
+\newcommand{\maxtimeindex}{\MakeUppercase{\timeindex}}
+\newcommand{\maxindindex}{\MakeUppercase{\indindex}}
+
+
+
+
+
+\newcommand\vectorsym[1]{\symbf{#1}}
+
+
+
+\newcommand{\dv}{\, \mathrm{d} } \newcommand{\rootn}{\sqrt{n}}
+
+\newcommand{\idmat}{\symtt{I}}
+
+% Transpose variations
+% \newcommand{\transintercal}{\interval}
+% \newcommand{\transtop}{\top}
+% % this one was nicest but I think it's font-specific \newcommand{\Top}{{\top\kern-0.48em \top}}
+%\newcommand{\Top}{{\mkern-1.0mu\top\kern-0.49em \top}}
+%\newcommand*{\isotran}{^{\mkern-1.5mu\symsfup{T}}}
+%\newcommand*{\transfup}{\symsfup{T}}
+% still to try this one: \newcommand*{\tran}{^{\mkern-1.5mu\mathsf{T}}}
+\newcommand{\trans}{\top}
+
+\newcommand{\stdbasis}{\symtt{e}} \newcommand{\zerovec}{{\vectorsym{0}}} \newcommand{\onesvec}{\vectorsym{J}}
+
+\DeclareMathOperator*{\argmax}{argmax} \DeclareMathOperator*{\argmin}{argmin}
+
+\newcommand{\indfun}{{\symbf{1}}}
+\newcommand{\indfunx}[1]{\indfun\{ #1 \}} \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\DeclareMathOperator{\sign}{sign}
+
+\newcommand{\normp}[1]{\norm{#1}_{p}}
+\newcommand{\normone}[1]{\norm{#1}_{1}}
+\newcommand{\normtwo}[1]{\norm{#1}_{2}}
+\newcommand{\norminfty}[1]{\norm{#1}_{\infty}}
+
+\newcommand{\N}{\symsfup{N}}
+
+\DeclareMathOperator{\blkdiag}{blkdiag}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\vect}{vec}
+
+
+\DeclareMathOperator{\bigo}{O}
+\DeclareMathOperator{\lilo}{o}
+\DeclareMathOperator{\opBase}{o_{P}}
+\newcommand{\op}[1]{\opBase(#1)}
+
+\def\do#1{\expandafter\gdef\csname mc#1\endcsname{{\symcal{#1}}}\expandafter\gdef\csname mbb#1\endcsname{{\symbb{#1}}}\expandafter\gdef\csname msf#1\endcsname{{\symsfup{#1}}}}
+
+\docsvlist{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
+
+
+\newcommand{\indp}{\perp}
+\newcommand{\condindp}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
+
+\newcommand{\asgnpol}{\phi}
+\newcommand{\pol}{\pi}
+\newcommand{\polset}{\Pi}
+\newcommand{\optpol}{\pol^{*}}
+\newcommand{\optpolset}{\polset^{*}}
+
+\newcommand{\MVN}{\mathrm{MVN}}
+
+\newcommand{\gp}{\symbfcal{G}}
+
+
+
+\DeclareMathOperator{\avar}{{\mathrm{Avar}}}
+\DeclareMathOperator{\cov}{{\mathrm{cov}}}
+\DeclareMathOperator{\E}{{\mathrm{I\kern-.3em E}}}
+\DeclareMathOperator{\mse}{{\mathrm{MSE}}}
+\DeclareMathOperator{\prob}{{\mathrm{Pr}}}
+\DeclareMathOperator{\var}{{\mathrm{Var}}}
+
+\DeclareMathOperator{\convas}{\overset{as}{\to}}
+\DeclareMathOperator{\convasstar}{\overset{as*}{\to}}
+\DeclareMathOperator{\convp}{\overset{p}{\to}}
+\DeclareMathOperator{\convd}{\arrowkitsquiggapleft \arrowkitsquigheadright} %unicode-minion-math
+% \DeclareMathOperator{\convd}{\leadsto}
+\newcommand{\as}{a.s.}
+\newcommand{\spparam}{\psi} \newcommand{\spparamp}{\spparam(P)}
+\newcommand{\spest}{T} \newcommand{\spestn}{\spest_{\asymindex}} \newcommand{\spif}{\Tilde{\spparam}_{P}}
+
+\DeclareMathOperator{\Pop}{P} \DeclareMathOperator{\Pn}{\mathbb{P}_n}
+
+\DeclareMathOperator{\KL}{\mathrm{KL}}
+
+\newcommand{\val}{{\symup{V}}}
+
+\newcommand{\valhat}{{\widehat{\val}}}
+\newcommand{\valhatn}{\valhat_{\asymindex}}
+\newcommand{\valhatm}{{\widehat{\val}}_{\epochindex}}
+
+\DeclareMathOperator{\BR}{BR} \DeclareMathOperator{\R}{\mathrm{R}} \DeclareMathOperator{\Reg}{\mathrm{Reg}} \DeclareMathOperator{\Regpop}{\mathrm{Reg^{pop}}} %
+
+
+\newcommand{\minimprob}{\rho}
+\newcommand{\minimweight}{\omega}
+\newcommand{\minimarmweight}{\alpha}
+\newcommand{\minimfunc}{g}
+\newcommand{\minimdim}{p}
+
+\newcommand{\teststat}{T}
+\newcommand{\teststatvec}{\symbf{\teststat}}
+\newcommand{\teststatvecn}{\symbf{\teststat}_{\asymindex}}
+\newcommand{\teststatn}{\teststat_{\asymindex}}
+\newcommand{\teststatnk}{\teststat_{\asymindex \armindex}}
+
+\newcommand{\paramvec}{\theta}
+\newcommand{\ijk}{\clustindex \timeindex \indindex}
+\newcommand{\contrastmat}{L}
+\newcommand{\ncp}{\lambda}
+
+
+
+\newcommand{\X}{\covarrv} \newcommand{\x}{\covarobs} \newcommand{\Xt}{\covarrv^{\trans}} \newcommand{\xt}{\covarobs^{\trans}} \newcommand{\Y}{\resprv} \newcommand{\y}{\respobs}
+\newcommand{\kp}{\armindex^{\prime}}
+
+\newcommand{\covmatk}{\Sigma_{\armindex}}
+
+\newcommand{\bmX}{\symbf{\X}}
+\newcommand{\bmx}{\symbf{\x}}
+
+\newcommand{\hist}{\histrv}
+\newcommand{\nm}{\asymindex_{\epochindex}}
+
+\newcommand{\funcx}[1]{#1 \left\{\x \right\})} \newcommand{\funcX}[1]{#1 \left\{ \X \right\}}
+
+
+\newcommand{\polopt}{\optpol}
+\newcommand{\polhat}{\widehat{\pol}}
+\newcommand{\polhatm}{\polhat_{\epochindex}}
+\newcommand{\polhatn}{\polhat_{\asymindex}}
+\newcommand{\polhatT}{\polhat_{\maxobsindex}}
+\newcommand{\polhatt}{\polhat_{\obsindex}}
+\newcommand{\polhatnk}{\polhat_{\asymindex, \armindex}}
+\newcommand{\polhatx}{\polhat(\covarrv )}
+\newcommand{\polhatmx}{\polhatm (\covarrv )}
+\newcommand{\polhatmk}{\polhat_{\obsindex}^{(\armindex)}}
+\newcommand{\polhatk}{\polhat_{\armindex}}
+\newcommand{\polhatkp}{\polhat_{\armindexprime}}
+\newcommand{\polhatnkp}{\polhat_{n,\armindexprime}}
+\newcommand{\polhatkpx}{\polhatkp(\covarrv )}
+
+\newcommand{\meanfunk}{f_{\armindex}}
+\newcommand{\meanfunhat}{\widehat{\meanfun}}
+\newcommand{\meanfunkhat}{\meanfunhat_{\armindex}}
+
+
+
+\newcommand{\armparamspace}{\symbfcal{B}}
+\newcommand{\armhat}{\widehat{\armparam}}
+\newcommand{\armparamk}{\armparam_{\armindex}}
+\newcommand{\armparamvec}{\vectorsym{\armparam}}
+\newcommand{\betaovec}{\vectorsym{\armparam}_0}
+\newcommand{\armmathat}{\widehat{\armparammat}}
+\newcommand{\armhatk}{\armhat_{kn}}
+\newcommand{\armhatp}{\armhat_{k^{\prime}n}}
+\newcommand{\armhatkp}{\armhatp}
+\newcommand{\armhatvec}{\widehat{\armparamvec}}
+\newcommand{\betak}{\armparam_{\armindex}}
+\newcommand{\betakkp}{\armparam_{\armindex \armindexprime}}
+\newcommand{\varub}{\armindex_{0}}
+\newcommand{\betajo}{\armparam_{\altarmindex 0}}
+\newcommand{\betako}{\armparam_{\armindex 0}}
+\newcommand{\betakpo}{\armparam_{\armindex^{\prime} 0}}
+\newcommand{\betap}{\armparam_{k^{\prime}}}
+
+\newcommand{\ko}{\armindex_{0}}
+\newcommand{\jko}{\altarmindex \armindex 0}
+\newcommand{\Ujko}{U_{\jko}}
+\newcommand{\Ujkox}{U_{\jko}(\covarrv)}
+\newcommand{\Ujkodef}{(\armparam_{\altarmindex 0} - \armparam_{\armindex 0})^{\trans}\covarrv}
+\newcommand{\Ujkhat}{\widehat{U}_{\altarmindex \armindex \asymindex}}
+\newcommand{\Ujkhatx}{\widehat{U}_{\altarmindex \armindex \asymindex}(\covarrv)}
+\newcommand{\Ujkhatdef}{\rootn (\betahatjn - \betahatkn)^{\trans}\covarrv}
+\newcommand{\Deltahatjk}{\widehat{\Delta}_{\altarmindex \armindex \asymindex}}
+\newcommand{\Deltahatkj}{\widehat{\Delta}_{\armindex \altarmindex \asymindex}}
+\newcommand{\Deltahatkkp}{\widehat{\Delta}_{\armindex \armindexprime}}
+\newcommand{\Deltahatjkx}{\widehat{\Delta}_{\altarmindex \armindex \asymindex}(\covarrv)}
+\newcommand{\Deltahatkkpx}{\Deltahatkkp(\covarrv)}
+\newcommand{\Deltahatjkdef}{\indfunx{\Ujkhatx > 0} - \indfunx{\Ujko > 0}}
+\newcommand{\Gjk}{G_{\altarmindex \armindex}}
+\newcommand{\Gkkp}{G_{\armindex \armindexprime}}
+\newcommand{\Suppjko}{S_{\jko}}
+\newcommand{\Udens}{f_{\altarmindex \armindex}}
+\newcommand{\Udensval}{f_{\jko}}
+\newcommand{\zeronb}{N_{\jko}}
+\newcommand{\Zjo}{Z_{\altarmindex 0}}
+\newcommand{\Zko}{Z_{\armindex 0}}
+\newcommand{\Zkpo}{Z_{\armindexprime 0}}
+
+\newcommand{\fkkpo}{f_{\armindex \armindexprime 0}}
+\newcommand{\betaok}{\armparam_{0\armindex}}
+\newcommand{\betaokp}{\armparam_{0\armindexprime }}
+\newcommand{\betakpk}{\beta_{\armindexprime \armindex}}
+\newcommand{\betahatjn}{\armhat_{jn}}
+\newcommand{\betahatkn}{\armhat_{kn}}
+\newcommand{\betahatkpn}{\armhat_{\armindexprime n}}
+\newcommand{\betahatj}{\betahatjn}
+\newcommand{\betahatk}{\armhatk}
+\newcommand{\betahatp}{\armhatp}
+\newcommand{\betahatkp}{\armhatkp}
+
+\newcommand{\betatildekpn}{\tilde{\armparam}_{\armindexprime n}}
+\newcommand{\betatildekkp}{\tilde{\armparam}_{\armindex \armindexprime}}
+
+
+\newcommand{\hkpx}{h_{\armindexprime}(\covarrv)}
+\newcommand{\hkpxstar}{h_{\armindexprime}^{*}(\covarrv)}
+
+\newcommand{\armhatnk}{\armhat_{\asymindex \armindex}}
+\newcommand{\armhatnkp}{\armhat_{\asymindex \armindexprime}}
+
+\newcommand{\betadiftrue}{\armparam_{0 \armindex} - \armparam_{0 \armindexprime}}
+\newcommand{\betadifhat}{\armhat_{\armindex} - \armhat_{\armindexprime}}
+
+\newcommand{\maxkk}{\max_{k^{\prime} \neq k}}
+
+\newcommand{\contrhat}{\widehat{\contrparam}}
+
+\newcommand{\armhatj}[1]{\armhat_{#1}}
+\newcommand{\contrhatk}[1]{\widehat{\contrparam}_{#1}} \newcommand{\contrhatjk}[2]{\armhatk{{#1}} - \armhatk{{#2}}}
+
+
+\newcommand{\hox}{h_{0}(x)}
+\newcommand{\hoX}{h_{0}(X)}
+\newcommand{\asymindex}{\ensuremath{n}}
+\newcommand{\maxasymindex}{\ensuremath{N}}
+
+
+\newcommand{\armindexprime}{\armindex^{\prime}}
+\newcommand{\dimarmparam}{d}
+
+\newcommand{\covarz}{\Sigma}
+\newcommand{\covarzk}{\covarz_{\armindex}}
+
+\newcommand{\zvec}{\symbf{Z}}
+\newcommand{\Zk}{Z_{\armindex}} \newcommand{\Zkp}{Z_{\armindexprime}}
+
+\newcommand{\rootnopdif}{\rootn(\Pn - \Pop)}
+
+\newcommand{\Zkkp}{Z_{\armindex \armindexprime}}
+\newcommand{\Zkdef}{\Zk = \rootn (\armhatnk - \beta_{0\armindex}) + \op{1}}
+\newcommand{\Zkdist}{\Zk \sim \MVN (\zerovec_{\dimarmparam}, \covmatk)}
+
+\newcommand{\Zkkpdef}{\Zkkp = \Zk - \Zkp = \rootn \left( (\betaok -
+	\betaokp) - (\betahatk - \betahatp )\right)}
+\newcommand{\Zkkpdist}{\Zkkp \sim \MVN(\zerovec_{\dimarmparam}, \covmatk + \covmat_{\armindexprime})}
+
+\newcommand{\mkb}[1][\armparam]{\symfrak{M}_{\armindex, \, #1}}
+\newcommand{\mkbx}[1][\armparam]{\mkb[#1] (\covarrv )}
+\newcommand{\mbx}[1][\armindex]{\symfrak{M}_{#1, \, \armparamvec_0}(\covarrv)}
+\newcommand{\mkbxo}{\mkb[{\armparam_{0}}] (\covarrv )}
+
+\newcommand{\mkbhat}{\mkb[\armhat]}
+\newcommand{\mkbhatn}{\mkb[\armhat_{\asymindex}]}
+\newcommand{\mkbhatx}{\mkbhat (\covarrv)}
+\newcommand{\mkbhatnx}{\mkbhatn (\covarrv)}
+
+\newcommand{\truevaldif}{\Delta}
+\newcommand{\valdifcovar}{\Omega}
+\newcommand{\truevaldifvec}{\symbf{\truevaldif}}
+\newcommand{\truevaldifk}{\truevaldif_{\armindex}}
+\newcommand{\valdifcovarmat}{\symbf{\valdifcovar}}
+\newcommand{\valdifcovark}{\valdifcovar_{\armindex}}
+
+
+\newcommand{\maxkpind}[1]{\max_{\armindexprime \neq \armindex} \indfunx{#1}}
+
+\newcommand{\mkbdef}{\maxkpind{\covarrv^{\trans} \left(\betadiftrue \right) > 0}\covarrv^{\trans}\armparamk}
+
+\newcommand{\mkbodef}{\maxkpind{\covarrv^{\trans} \left(\armparam_{0\armindex} - \armparam_{0\armindexprime} \right) > 0}\covarrv^{\trans}\armparamk}
+
+\newcommand{\confseq}{\mathcal{C}}
+\newcommand{\cset}{\symsfup{CI}}
+\newcommand{\cseq}{\confseq}
+\newcommand{\csm}{\confseq_m}
+\newcommand{\csma}{\confseq_{m, 1-\alpha}}
+\newcommand{\cilb}{\symsfup{L}}
+\newcommand{\ciup}{\symsfup{U}}
+
+
+
+
+%%%%
+% Arms
+\newcommand{\indArm}{\armrv^{\text{IL}}} % individual level treatment effect parameter
+\newcommand{\indArmj}{\armrv_{\timeindex}^{\text{IL}}} % individual level treatment effect parameter
+\newcommand{\clArm}{\armrv^{\text{CL}}} % individual level treatment effect parameter
+\newcommand{\clArmj}{\armrv_{\timeindex}^{\text{CL}}} % individual level treatment effect parameter
+\newcommand{\indarm}{\armobs^{\text{IL}}} % individual level treatment effect parameter
+\newcommand{\indarmj}{\armobs_{\timeindex}^{\text{IL}}} % individual level treatment effect parameter
+\newcommand{\clarm}{\armobs^{\text{CL}}} % individual level treatment effect parameter
+\newcommand{\clarmj}{\armobs_{\timeindex}^{\text{CL}}} % individual level treatment effect parameter
+
+\newcommand{\baselineparams}{\beta} %baseline parameter vector
+\newcommand{\timevarparams}{\gamma} %time-varying covariate parameters
+\newcommand{\trtparams}{\delta} % treatment effect parameters
+\newcommand{\allparams}{\theta} % all parameters
+
+% Shorthand
+\newcommand{\cndx}{\clustindex} % Cluster index
+\newcommand{\tndx}{\timeindex} % Time Index
+\newcommand{\indx}{\indindex} % Individual index
+
+\newcommand{\iltrt}{\trtparams^{\text{IL}}} % individual level treatment effect parameter
+\newcommand{\cltrt}{\trtparams^{\text{CL}}} % cluster level treatment effect parameter
+\newcommand{\inttrt}{\trtparams^{\text{int}}} % treatment interaction
+
+\newcommand{\causalestimand}{\tau}
+\newcommand{\cest}{\causalestimand}
+
+\DeclareMathOperator{\invlinkfun}{\linkfun^{-1}} % link function
+
+\DeclareMathOperator{\designfun}{f} % fixed known function that produces the design matrix
+
+\newcommand{\Ahist}{\overline{\armrv}}
+\newcommand{\ahist}{\overline{\armobs}}
+\newcommand{\Ahistj}{\Ahist_{\timeindex}}
+\newcommand{\ahistj}{\ahist_{\timeindex}}
+
+\newcommand{\Tvhist}{\overline{\timevarrv}}
+\newcommand{\Tvhistj}{\Tvhist_{\timeindex}}
+\newcommand{\tvhist}{\overline{\timevarobs}}
+\newcommand{\tvhistj}{\tvhist_{\timeindex}}
+
+\newcommand{\Yhist}{\overline{\resprv}}
+\newcommand{\Yhistj}{\Yhist_{\timeindex}}
+
+\newcommand{\yhist}{\overline{\respobs}}
+\newcommand{\yhistj}{\yhist_{\timeindex}}
+\newcommand{\po}{\pout} % shorthand for potential outcome
+\newcommand{\poj}{\po_{\timeindex}} % potential outcome at time j
+\newcommand{\poja}{\poj \left(\ahistj \right)} %potential outcome with given history
+
+
+\newcommand{\estimatordef}{n^{-1}\sum_{i = 1}^n \covarobs_{i}\left( \prod_{j \notin \{\armindex, \armindexprime \}} \indfunx{(\betahatkn - \betahatjn)^{\trans}\covarobs_i > 0} \right) \frac{1}{\widehat{h}}\Phi \left(\frac{(\betahatkn - \betahatkpn)^{\trans}\covarobs_i}{\widehat{h}} \right)}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "100_main"
+%%% End:

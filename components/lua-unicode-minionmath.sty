@@ -1,0 +1,175 @@
+%%
+%% This is file `unicode-minionmath.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% unicode-minionmath.dtx  (with options: `package')
+%% ----------------------------------------------------------------
+%% unicode-minionmath --- Package for using Minion Math fonts with XeLaTeX and LuaLaTeX
+%% E-mail: info@typoma.com
+%% Released under the LaTeX Project Public License v1.3c or later
+%% See http://www.latex-project.org/lppl.txt
+%% ----------------------------------------------------------------
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lua-unicode-minionmath}[2014/12/12 v0.1 Package for using Minion Math fonts with XeLaTeX and LuaLaTeX]
+\Umathchardef\arrowkitNONE              = "0"0"F0413   % 01 L
+\Umathchardef\arrowkit@EXT              = "0"0"F0414   % 01 C
+\Umathchardef\arrowkitNEG               = "0"0"F0415   % 01 N
+\Umathchardef\arrowkitNEGEXT            = "0"0"F0416   % 01 MN
+\Umathchardef\arrowkitGAP               = "0"0"F0417   % 01 G
+\Umathchardef\arrowkitGAPEXT            = "0"0"F0418   % 01 MG
+\Umathchardef\arrowkitSQUIG             = "0"0"F0419   % 21 M
+\Umathchardef\arrowkitDASH              = "0"0"F041A   % 11 M
+\Umathchardef\arrowkithead              = "0"0"F041B   % 01 L
+\Umathchardef\arrowkitHead              = "0"0"F041C   % 02 L
+\Umathchardef\arrowkitHEAD              = "0"0"F041D   % 03 L
+\Umathchardef\arrowkitthickhead         = "0"0"F041E   % 01 L
+\Umathchardef\arrowkitdoublehead        = "0"0"F041F   % 01 L
+\Umathchardef\arrowkitmapsfromhead      = "0"0"F0420   % 01 L
+\Umathchardef\arrowkitMapsfromhead      = "0"0"F0421   % 02 L
+\Umathchardef\arrowkitMAPSfromhead      = "0"0"F0422   % 03 L
+\Umathchardef\arrowkithookuphead        = "0"0"F0423   % 01 L
+\Umathchardef\arrowkithookdownhead      = "0"0"F0424   % 01 L
+\Umathchardef\arrowkitharpoonupdhead    = "0"0"F0425   % 01 L
+\Umathchardef\arrowkitharpoondownhead   = "0"0"F0426   % 01 L
+\Umathchardef\arrowkitharpoonsuphead    = "0"0"F0427   % 01 L
+\Umathchardef\arrowkitharpoonsdownhead  = "0"0"F0428   % 04 L
+\Umathchardef\arrowkitharpoonshead      = "0"0"F0429   % 04 L
+\Umathchardef\arrowkitheadsup           = "0"0"F042A   % 04 L
+\Umathchardef\arrowkitheadsdown         = "0"0"F042B   % 04 L
+\Umathchardef\arrowkitheads             = "0"0"F042C   % 04 L
+\Umathchardef\arrowkitfeatherhead       = "0"0"F042D   % 01 L
+\Umathchardef\arrowkitfeathershead      = "0"0"F042E   % 01 L
+\Umathchardef\arrowkitcurlyuphead       = "0"0"F042F   % 01 L
+\Umathchardef\arrowkitcurlydownhead     = "0"0"F0430   % 01 L
+\Umathchardef\arrowkitcirchead          = "0"0"F0431   % 01 L
+\Umathchardef\arrowkitbullethead        = "0"0"F0432   % 01 L
+\Umathchardef\arrowkitheadright         = "0"0"F0433   % 01 R
+\Umathchardef\arrowkitHeadright         = "0"0"F0434   % 02 R
+\Umathchardef\arrowkitHEADright         = "0"0"F0435   % 03 R
+\Umathchardef\arrowkitthickheadright    = "0"0"F0436   % 01 R
+\Umathchardef\arrowkitdoubleheadright   = "0"0"F0437   % 01 R
+\Umathchardef\arrowkitmapsfromright     = "0"0"F0438   % 01 R
+\Umathchardef\arrowkitMapsfromright     = "0"0"F0439   % 02 R
+\Umathchardef\arrowkitMAPSfromright     = "0"0"F043A   % 03 R
+\Umathchardef\arrowkithookupright       = "0"0"F043B   % 01 R
+\Umathchardef\arrowkitdownright         = "0"0"F043C   % 01 R
+\Umathchardef\arrowkitharpoonupright    = "0"0"F043D   % 01 R
+\Umathchardef\arrowkitharpoondownright  = "0"0"F043E   % 01 R
+\Umathchardef\arrowkitharpoonsupright   = "0"0"F043F   % 04 R
+\Umathchardef\arrowkitharpoonsdownright = "0"0"F0440   % 04 R
+\Umathchardef\arrowkitharpoonsright     = "0"0"F0441   % 04 R
+\Umathchardef\arrowkitarrowsupright     = "0"0"F0442   % 04 R
+\Umathchardef\arrowkitarrowsdownright   = "0"0"F0443   % 04 R
+\Umathchardef\arrowkitarrowsright       = "0"0"F0444   % 04 R
+\Umathchardef\arrowkitfeatherright      = "0"0"F0445   % 01 R
+\Umathchardef\arrowkitfeathersright     = "0"0"F0446   % 01 R
+\Umathchardef\arrowkitcurlyupright      = "0"0"F0447   % 01 R
+\Umathchardef\arrowkitcurlydown         = "0"0"F0448   % 01 R
+\Umathchardef\arrowkitcircheadright     = "0"0"F0449   % 01 R
+\Umathchardef\arrowkitbulletheadright   = "0"0"F044A   % 01 R
+\Umathchardef\arrowkitsquighead         = "0"0"F044B   % 21 R
+\Umathchardef\arrowkitdashhead          = "0"0"F044C   % 11 R
+\Umathchardef\arrowkitDashhead          = "0"0"F044D   % 12 R
+\Umathchardef\arrowkitDASHhead          = "0"0"F044E   % 13 R
+\Umathchardef\arrowkitsquigheadright    = "0"0"F044F   % 21 R
+\Umathchardef\arrowkitdashheadright     = "0"0"F0450   % 11 R
+\Umathchardef\arrowkitDashheadright     = "0"0"F0451   % 12 R
+\Umathchardef\arrowkitDASHheadright     = "0"0"F0452   % 13 R
+\Umathchardef\arrowkitHeadnone          = "0"0"F0454   % 02 R
+\Umathchardef\arrowkitarrowsnone        = "0"0"F0455   % 04 R
+\Umathchardef\arrowkitHEADnone          = "0"0"F0456   % 03 R
+\Umathchardef\arrowkitsquignone         = "0"0"F0457   % 21 R
+\Umathchardef\arrowkitdashnone          = "0"0"F0458   % 11 R
+\Umathchardef\arrowkitDashnone          = "0"0"F0459   % 12 R
+\Umathchardef\arrowkitDASHnone          = "0"0"F045A   % 13 R
+\Umathchardef\arrowkitheadrightnone     = "0"0"F045B   % 01 R
+\Umathchardef\arrowkitHeadrightnone     = "0"0"F045C   % 02 R
+\Umathchardef\arrowkitarrowsrightnone   = "0"0"F045D   % 04 R
+\Umathchardef\arrowkitHEADrightnone     = "0"0"F045E   % 03 R
+\Umathchardef\arrowkitsquigrightnone    = "0"0"F045F   % 21 R
+\Umathchardef\arrowkitdashrightnone     = "0"0"F0460   % 11 R
+\Umathchardef\arrowkitDashrightnone     = "0"0"F0461   % 12 R
+\Umathchardef\arrowkitDASHrightnone     = "0"0"F0462   % 13 R
+\Umathchardef\arrowkitsingleext         = "0"0"F0463   % 01 M
+\Umathchardef\arrowkitdoubleext         = "0"0"F0464   % 02 M
+\Umathchardef\arrowkitwidedoubleext     = "0"0"F0465   % 04 M
+\Umathchardef\arrowkittripleext         = "0"0"F0466   % 03 M
+\Umathchardef\arrowkitsquiggapleft      = "0"0"F0467   % 21 MG
+\Umathchardef\arrowkitsquiggapright     = "0"0"F0468   % 21 MG
+\Umathchardef\arrowkitDashext           = "0"0"F0469   % 12 M
+\Umathchardef\arrowkitDASHext           = "0"0"F046A   % 13 M
+\Umathchardef\arrowkitdoubleneg         = "0"0"F046C   % 02 N
+\Umathchardef\arrowkitwidedoubleneg     = "0"0"F046D   % 04 N
+\Umathchardef\arrowkittripleneg         = "0"0"F046E   % 03 N
+\Umathchardef\arrowkitsquigneg          = "0"0"F046F   % 21 N
+\Umathchardef\arrowkitdashneg           = "0"0"F0470   % 11 N
+\Umathchardef\arrowkitDashneg           = "0"0"F0471   % 12 N
+\Umathchardef\arrowkitDASHneg           = "0"0"F0472   % 13 N
+\Umathchardef\arrowkitdoublenegext      = "0"0"F0474   % 02 MN
+\Umathchardef\arrowkitwidedoublenegext  = "0"0"F0475   % 04 MN
+\Umathchardef\arrowkittriplenegext      = "0"0"F0476   % 03 MN
+\Umathchardef\arrowkitsquignegext       = "0"0"F0477   % 21 MN
+\Umathchardef\arrowkitdashnegext        = "0"0"F0478   % 11 MN
+\Umathchardef\arrowkitDashnegext        = "0"0"F0479   % 12 MN
+\Umathchardef\arrowkitDASHnegext        = "0"0"F047A   % 13 MN
+\Umathchardef\arrowkitdoublegap         = "0"0"F047C   % 02 G
+\Umathchardef\arrowkitwidedoublegap     = "0"0"F047D   % 04 G
+\Umathchardef\arrowkittriplegap         = "0"0"F047E   % 03 G
+\Umathchardef\arrowkitsquiggap          = "0"0"F047F   % 21 G
+\Umathchardef\arrowkitdashgap           = "0"0"F0480   % 11 G
+\Umathchardef\arrowkitDashgap           = "0"0"F0481   % 12 G
+\Umathchardef\arrowkitDASHgap           = "0"0"F0482   % 13 G
+\Umathchardef\arrowkitdoublegapext      = "0"0"F0484   % 02 MG
+\Umathchardef\arrowkitwidedoublegapext  = "0"0"F0485   % 04 MG
+\Umathchardef\arrowkittriplegapext      = "0"0"F0486   % 03 MG
+\Umathchardef\arrowkitsquiggapext       = "0"0"F0487   % 21 MG
+\Umathchardef\arrowkitdashgapext        = "0"0"F0488   % 11 MG
+\Umathchardef\arrowkitDashgapext        = "0"0"F0489   % 12 MG
+\Umathchardef\arrowkitDASHgapext        = "0"0"F048A   % 13 MG
+
+\Umathchardef\bigcapdot                 = "1"0"F5816   % big intersection with dot inside
+\Umathchardef\bigoblong                 = "1"0"F5820   % big oblong
+\Umathchardef\bigparallel               = "1"0"F5821   % big parallel
+\Umathchardef\bighash                   = "1"0"F5824   % big hash (numbersign, octothorpe)
+\Umathchardef\bigoctothorpe             = "1"0"F5824   % big hash (numbersign, octothorpe)
+\Umathchardef\bigast                    = "1"0"F5825   % big asterisk
+\Umathchardef\bigoperp                  = "1"0"F5826   % big circled perpendicular
+\Umathchardef\bigplus                   = "1"0"F5827   % big plus
+\Umathchardef\bigboxplus                = "1"0"F5830   % big boxed plus
+\Umathchardef\bigboxtimes               = "1"0"F5831   % big boxed times
+\Umathchardef\sumsum                    = "1"0"F5833   % two summation signs
+\Umathchardef\bigampersand              = "1"0"F5840   % big ampersand
+\Umathchardef\bigupand                  = "1"0"F5841   % big turned ampersand
+\Umathchardef\bigleftouterjoin          = "1"0"F5844   % big left outer join
+\Umathchardef\bigrightouterjoin         = "1"0"F5845   % big right outer join
+\Umathchardef\bigfullouterjoin          = "1"0"F5846   % big full outer join
+\def\lmultisetgroup         { \Udelimiter "4"0"F6220 } %% left  delimiter  multiset group (closed \lgroup)
+\def\rmultisetgroup         { \Udelimiter "5"0"F6230 } %% right delimiter  multiset group (closed \rgroup)
+\def\leftlcm                { \Udelimiter "4"0"F6240 } %% left  delimiter  least common multiple
+\def\rightlcm               { \Udelimiter "5"0"F6250 } %% right delimiter  least common multiple
+\def\leftgcd                { \Udelimiter "4"0"F6260 } %% left  delimiter  greatest common divisor
+\def\rightgcd               { \Udelimiter "5"0"F6270 } %% right delimiter  greatest common divisor
+
+%%
+%% Copyright (C) 2014 by Johannes Küster <info@typoma.com>
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%%
+%% http://www.latex-project.org/lppl.txt
+%%
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% You.
+%%
+%% This work consists of the file  unicode-minionmath.dtx
+%% and the derived files           unicode-minionmath.ins,
+%%                                 unicode-minionmath.pdf and
+%%                                 unicode-minionmath.sty.
+%%
+%%
+%% End of file `unicode-minionmath.sty'.

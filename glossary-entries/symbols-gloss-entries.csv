@@ -1,0 +1,62 @@
+﻿label,symbol,sort-prefix,description
+emptyset,\emptyset,math,the set containing no elements
+armrv,\armrv,a-data-b,"Arm, treatment, or intervention"
+covarrv,\covarrv,a-data-a,Covariate random variable or vector
+resprv,\resprv,a-data-c,Response random variable
+posymb,\pout,a-data-e,Potential outcome
+histrv,\histrv,a-data-d,History random vector
+policy,\pol,a-data-fa,(Treatment) Policy or dynamic treatment regime
+optpolsymb,\optpol,a-data-fb,Optimal treatment policy or dynamic treatment regime
+polsetsymb,\polset,a-data-gg,Set or space of all possible policies
+optpolsetsymb,\optpolset,a-data-gh,Set of optimal policies
+armspace,\armspace,a-data-gb,Set of treatment arms
+covarspace,\covarspace,a-data-ga,Sample space
+respspace,\respspace,a-data-gc,Response space. $\mathbb{R}$ unless otherwise noted
+histspace,\histspace,a-data-gd,History space
+independent,\indp,stat-fund,Independent
+conditional-independence,\condindp,stat-fund,Conditionally independent
+obsindex,\obsindex,b-index-aa,Observation index
+maxobsindex,\maxobsindex,b-index-ba,Maximal observation index. Equivalent to the sample size
+armindex,\armindex,b-index-ab,Arm or treatment index
+maxarmindex,\maxarmindex,b-index-bb,Maximal arm index
+clustindex,\clustindex,b-index-ac,Cluster index (Chapter~\ref{ch:ncworks})
+maxclustindex,\maxclustindex,b-index-bc,Maximal cluster index (Chapter~\ref{ch:ncworks})
+timeindex,\timeindex,b-index-ad,Time period index (Chapter~\ref{ch:ncworks}; distinct from calendar time)
+maxtimeindex,\maxtimeindex,b-index-bd,Maximal time period index
+indindex,\indindex,b-index-ae,Individual index (Chapter~\ref{ch:ncworks})
+maxindindex,\maxindindex,b-index-be,Maximal individual index (Chapter~\ref{ch:ncworks}). Equal to the number of individuals in a cluster
+indfun,\indfun,math,Indicator function
+norm,\norm{\cdot},math,Matrix or vector norm
+probability,\prob,stat-fund,Probability
+expectation,\E,stat-fund,Expectation
+Pn,\Pn,stat-op,Empirical measure
+Pop,\Pop,stat-op,Probability measure
+argmax,\argmax,math,argmax
+argmin,\argmin,math,argmin
+err,\err,param,error term
+idmat,\idmat,math,Identity matrix
+symbperfcutoff,\perfcutoff,param,Chapter~\ref{ch:best}: percentage of optimal value cutoff
+asgnpol,\asgnpol,func,treatment assignment policy
+stdbasis,\stdbasis_{i},math,standard basis vector with a one at element $i$ and zero everywhere else
+meanfun,\meanfun,cmab,Conditional expectation function that takes an observation and an arm as arguments
+meanfunk,\meanfunk,cmab,Conditional expectation function for arm $\armindex$ which takes an observation as an argument
+funclass,\funclass,cmab,Function class for the conditional expectation function
+minimfunc,\minimfunc,best,Imbalance function for minimization algorithm
+minimweight,\minimweight,best,vector of weights for the relative important of covariates (including the treatment arm) for calculating imbalance score in minimization
+minimprob,\minimprob,best,Probability that minimization algorithm will assign the treatment that minimizes the imbalance score
+expresp,\expresp,param,Expected response
+linkfun,\linkfun,c-data-funcs,Link function (Chapter~\ref{ch:ncworks})
+paramvec,\paramvec,param,Vector of all mean model parameters (Chapter~\ref{ch:ncworks})
+contrastmat,\contrastmat,testing,Contrast matrix that specifies Wald hypothesis tests (Chapter~\ref{ch:ncworks})
+ncp,\ncp,testing,Noncentrality parameter of the $\chi^2$ distribution (Chapter~\ref{ch:ncworks})
+dim,\dim,math,Dimension of a vector
+regpop,\Regpop,cmab,Population expected regret for a given (potentially estimated) policy
+polhat,\polhat,cmab,Estimated optimal policy.
+polhatkp,\polhatkp,cmab,Estimated optimal policy not involving arm $\armindexprime$
+convd,\convd,stat-asym,Convergence in distribution
+convp,\convp,stat-asym,Convergence in probability
+gp,\gp,stat-asym,Gaussian Procession
+op,\op{r_n},stat-asymcz,Rate $r_n$ convergence to zero in probability
+kron,\otimes,math,Kronecker product
+onesvec,\onesvec,math,Vector of 1s
+reals,\mathbb{R},math,Real numbers

@@ -1,0 +1,61 @@
+command,label,short,long
+newacronym,ate,ATE,average treatment effect
+newacronym,mle,MLE,maximum likelihood estimation
+newacronym,mab,MAB,multi-armed bandit
+newacronym,cmab,CMAB,contextual multi-armed bandit
+newacronym,rar,RAR,response-adaptive randomization
+newacronym,cara,CARA,covariate-adjusted response-adaptive
+newacronym,ncworks,NCW4H,North Carolina works for health
+newacronym,best,BEST,Biomarkers for Evaluating Spine Treatments
+newacronym,act,ACT,acceptance and commitment therapy
+newacronym,ebem,EBEM,evidence-based exercise and manual therapy
+newacronym,esc,ESC,enhanced self-care
+newacronym,ae,AE,adverse event
+newacronym,bacpac,BACPAC,Back Pain Consortium
+newacronym,clbp,cLBP,chronic lower back pain
+newacronym,dtr,DTR,dynamic treatment regime
+newacronym,niams,NIAMS,National Institute of Arthritis and Musculoskeletal and Skin Diseases
+newacronym,nih,NIH,National Institutes of Health
+newacronym,peg,PEG,"Pain, Enjoyment of Life, and General activity"
+newacronym,pgic,PGIC,patient global impressions
+newacronym,sae,SAE,serious adverse event
+newacronym,sap,SAP,statistical analysis plan
+newacronym,smart,SMART,sequential multiple assignment randomized trial
+newacronym,heal,HEAL,helping end addiction long-term
+newacronym,car,CAR,covariate-adaptive randomization
+newacronym,mri,MRI,magnetic resonance imaging
+newacronym,mrs,MRS,magnetic resonance spectroscopy
+newacronym,pro,PRO,patient reported outcome
+newacronym,snri,SNRI,serotonin–norepinephrine reuptake inhibitor
+newacronym,immpact,IMMPACT,"Initiative on Methods, Measurement, and Pain Assessment in Clinical Trials"
+newacronym,nimhd,NIMHD,The National Institute of Minority Health and Health Disparities
+newacronym,sdoh,SDOH,social determinants of health
+newacronym,sed,SED,socioeconomically disadvantaged
+newacronym,rct,RCT,randomized controlled trial
+newacronym,il,IL,individual level
+newacronym,cl,CL,cluster level
+newacronym,el,EL,employer level
+newacronym,sw,SW,stepped wedge
+newacronym,swd,SWD,stepped wedge design
+newacronym,swt,SWT,stepped wedge trial
+newacronym,gee,GEE,generalized estimating equations
+newacronym,consort,CONSORT,consolidated standards of reporting trials
+newacronym,dp,DP,design pattern
+newacronym,po,PO,potential outcome
+newacronym,cm,CM,completeness matrix
+newacronym,crt,CRT,cluster-randomized trial
+newacronym,crd,CRD,cluster-randomized design
+newacronym,cdpp,CDPP,Chronic Disease Prevention Program
+newacronym,mli,MLI,multi-level intervention
+newacronym,mlest,MLE,maximum likelihood estimator
+newacronym,ols,OLS,ordinary least squares
+newacronym,er,ER,equal randomization
+newacronym,ipw,IPW,inverse probability weighting
+newacronym,aipw,AIPW,augmented inverse probability weighting
+newacronym,edtr,eDTR,embedded dynamic treatment regime
+newacronym,cs,CS,computer science
+newacronym,igw,IGW,inverse-gap weighting
+newacronym,clt,CLT,central limit theorem
+newacronym,cb,CB,contextual bandit
+newacronym,itr,ITR,individualized treatment rule
+newacronym,ar,AR,adaptive randomization

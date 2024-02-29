@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\frenchspacing
+%%%
+%%% Math
+%%%
+%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+%%%
+%%% Citation Management
+%%%
+%%%
+\usepackage{natbib}
+
+%%%
+%%% Layout
+%%%
+%%%
+\usepackage[letterpaper, left=1.25in, right=1.25in]{geometry}
+\usepackage{layouts}
+
+%%%
+%%% Figures
+%%%
+%%%
+\usepackage{graphicx}
+
+%%%
+%%% Tables
+%%%
+%%%
+\usepackage{booktabs}
+
+%%%
+%%% Algorithm
+%%%
+%%%
+\usepackage[boxed,longend, linesnumbered]{algorithm2e}
+
+%%%
+%%% Theorem Environments
+%%%
+%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}%  meant for continuous numbers
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+
+\theoremstyle{remark}
+\newtheorem{remark}{remark}
+
+%%%
+%%% Font-related Stuff
+%%%
+%%%
+\usepackage{fontspec}
+\setmainfont{Minion3}
+
+\usepackage{components/lua-unicode-minionmath}
+\usepackage[math-style=TeX]{unicode-math}
+\setmathfont[
+	Extension = .otf,
+	Scale = 1,
+	Script = Math,
+	SizeFeatures = {
+			{Size = -7.2, Font = MinionMath-Tiny,
+					Style = MathScriptScript},
+			{Size = 7.2-10.0, Font = MinionMath-Capt,
+					Style = MathScript},
+			{Size = 10.0-, Font = MinionMath-Regular},
+		}]{MinionMath-Regular}
+
+\setmathfont{MinionMath-Bold}[range={bfup->up,bfit->it}]
+\setmathfont{MinionMath-Regular}[range={"F0000-"FFFFF}]
+\setmathfont{Euler Math}[Scale = MatchLowercase, range={cal, bfcal,frak,bffrak}]
+\setmathfont{FiraMath-Regular}[Scale = MatchUppercase, range={sfup}]
+\setmathfont[range={}]{MinionMath-Regular.otf}
+
+\usepackage{microtype}
+
+%%%
+%%% Acronym Glossary
+%%%
+%%%
+\usepackage[acronym, toc=false]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short}
+\setabbreviationstyle{long-short}
+\loadglsentries[acronym]{glossary-entries/acronym-glossary-entries}
+
+%%%
+%%% Basic Properties
+%%%
+%%%
+\title{Working Title}
+\author{John Sperger}
+
+
+
+\begin{document}
+\end{document}
+
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: t
+%%% End:
