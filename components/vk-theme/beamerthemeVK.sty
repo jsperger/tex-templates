@@ -1,0 +1,24 @@
+\ProvidesPackage{components/vk-theme/beamerthemeVK}[2021/01/16]
+\def\beamerVK@version{0.1}
+
+\mode<presentation>
+
+\usepackage{components/vk-theme/beamerinnerthemeVK}
+\usepackage{components/vk-theme/beamerouterthemeVK}
+\usepackage{components/vk-theme/beamercolorthemeVK}
+\usepackage{components/vk-theme/beamerfontthemeVK}
+
+\beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{itemize items}[circle]
+
+\RequirePackage{etoolbox}
+
+\usepackage{import}
+\usepackage[framemethod=TikZ]{mdframed}
+% --- Commands ---
+\input{components/vk-theme/vk-commands}
+
+\mode
+<all>

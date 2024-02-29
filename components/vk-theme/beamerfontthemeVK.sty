@@ -1,0 +1,36 @@
+\mode<presentation>
+
+\usepackage{fontspec}
+\setmainfont{Minion 3}
+
+\usepackage{components/lua-unicode-minionmath}
+\usepackage[math-style=TeX]{unicode-math}
+\setmathfont[
+	Extension = .otf,
+	Scale = 1.1,
+	Script = Math,
+	SizeFeatures = {
+			{Size = -6.6, Font = MinionMath-Tiny, Style = MathScriptScript},
+			{Size = 6.6-9.2, Font = MinionMath-Capt, Style = MathScript},
+			{Size = 9.2-, Font = MinionMath-Regular}}]{MinionMath-Regular}
+
+\setmathfont{MinionMath-Bold}[range={bfup->up,bfit->it}]
+
+\setmathfont{MinionMath-Regular}[range={"F0000-"FFFFF}]
+
+\setmathfont{Euler Math}[Scale = 1, range={cal, bfcal,frak,bffrak}]
+
+\setbeamerfont{frametitle}{size={\fontsize{18}{22}}}
+\setbeamerfont{framesubtitle}{size={\fontsize{8}{12}}}
+
+% \setbeamerfont{title}{size={\fontsize{30}{40}}}
+% \setbeamerfont{subtitle}{size={\fontsize{12}{16}}}
+% \setbeamerfont{author}{size={\fontsize{12}{16}}}
+
+\setbeamerfont{title}{size={\fontsize{17}{20}}}
+\setbeamerfont{subtitle}{size={\fontsize{12}{16}}}
+\setbeamerfont{author}{size={\fontsize{13}{16}}}
+\setbeamerfont{date}{size={\fontsize{10}{16}}}
+
+\mode
+<all>

@@ -1,6 +1,7 @@
 \documentclass[aspectratio=169, professionalfonts]{beamer}
 
 \usepackage{graphicx}
+\usepackage{subfig}
 \usepackage{longtable}
 \usepackage{wrapfig}
 \usepackage{rotating}
@@ -13,19 +14,26 @@
 	linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example},
 	pdfpagemode=FullScreen}
 
-\input{combined-macros.tex}
+\input{components/combined-macros.tex}
 
 \usepackage[style=verbose-ibid,backend=bibtex, isbn=false, url=false, doi=false,
 	eprint=false, dashed=false]{biblatex}
 \addbibresource{my-library.bib}
 
-\usetheme{VK}
+% Assumed directory structure is structure both VK and its associated files
+% live in ./components/vk-theme
+\usepackage{components/vk-theme/beamerthemeVK}
 
 \author{John Sperger}
 \date{}
 \title{Working Title}
 \subtitle{Working Subtitle}
 \begin{document}
+\maketitle
+\begin{frame}{Outline}
+	\tableofcontents[hideallsubsections]
+\end{frame}
+
 
 \end{document}
 %%% Local Variables:
