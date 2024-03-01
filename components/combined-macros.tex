@@ -35,6 +35,7 @@
 \newcommand{\covardist}{\symbfcal{D}_{\covarrv}}
 
 \newcommand{\pout}{\resprv^{*}}
+\newcommand{\pouta}{\resprv^{(\armobs)}}
 
 \newcommand{\funclass}{\symbfcal{F}}
 \newcommand{\meanfun}{f}
@@ -59,10 +60,13 @@
 \newcommand{\armindex}{k}
 \newcommand{\altarmindex}{j}
 \newcommand{\epochindex}{m}
+\newcommand{\stageindex}{s}
 
 \newcommand{\maxobsindex}{\MakeUppercase{\obsindex}}
 \newcommand{\maxarmindex}{\MakeUppercase{\armindex}}
 \newcommand{\maxepochindex}{\MakeUppercase{\epochindex}}
+\newcommand{\maxstageindex}{\MakeUppercase{\stageindex}}
+
 
 \newcommand{\clustindex}{i} \newcommand{\timeindex}{j} \newcommand{\indindex}{k}
 
@@ -97,7 +101,8 @@
 \DeclareMathOperator*{\argmax}{argmax} \DeclareMathOperator*{\argmin}{argmin}
 
 \newcommand{\indfun}{{\symbf{1}}}
-\newcommand{\indfunx}[1]{\indfun\{ #1 \}} \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\indfunx}[1]{\indfun\{ #1 \}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \DeclareMathOperator{\sign}{sign}
 
 \newcommand{\normp}[1]{\norm{#1}_{p}}
@@ -405,7 +410,7 @@
 \newcommand{\po}{\pout} % shorthand for potential outcome
 \newcommand{\poj}{\po_{\timeindex}} % potential outcome at time j
 \newcommand{\poja}{\poj \left(\ahistj \right)} %potential outcome with given history
-
+\newcommand{\poa}[1]{\resprv^{(#1)}}
 
 \newcommand{\estimatordef}{n^{-1}\sum_{i = 1}^n \covarobs_{i}\left( \prod_{j \notin \{\armindex, \armindexprime \}} \indfunx{(\betahatkn - \betahatjn)^{\trans}\covarobs_i > 0} \right) \frac{1}{\widehat{h}}\Phi \left(\frac{(\betahatkn - \betahatkpn)^{\trans}\covarobs_i}{\widehat{h}} \right)}
 
