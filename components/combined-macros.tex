@@ -138,6 +138,7 @@
 \newcommand{\condindp}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
 
 \newcommand{\asgnpol}{\phi}
+\newcommand{\histpol}{h}
 \newcommand{\pol}{\pi}
 \newcommand{\polset}{\Pi}
 \newcommand{\optpol}{\pol^{*}}
@@ -420,6 +421,49 @@
 \newcommand{\poa}[1]{\resprv^{(#1)}}
 
 \newcommand{\estimatordef}{n^{-1}\sum_{i = 1}^n \covarobs_{i}\left( \prod_{j \notin \{\armindex, \armindexprime \}} \indfunx{(\betahatkn - \betahatjn)^{\trans}\covarobs_i > 0} \right) \frac{1}{\widehat{h}}\Phi \left(\frac{(\betahatkn - \betahatkpn)^{\trans}\covarobs_i}{\widehat{h}} \right)}
+
+%%%%%
+% Non-asymptotic Anytime-valid Confidence Sequences
+%
+\newcommand{\history}{\mathcal{H}}
+\newcommand{\algcomment}[1]{\textcolor{darkgray}{\textit{// #1}}}
+\newcommand{\boundarysym}{\mathfrak B}
+\newcommand{\DR}{\mathrm{DR}}
+\newcommand{\IW}{\mathrm{IW}}
+\newcommand{\DRL}{{(\mathrm{DR}\text{-}\ell)}}
+\newcommand{\DRU}{{(\mathrm{DR}\text{-}u)}}
+\newcommand{\IWL}{{(\mathrm{IW}\text{-}\ell)}}
+\newcommand{\IWU}{{(\mathrm{IW}\text{-}u)}}
+\newcommand{\LIL}{\mathrm{LIL}}
+\newcommand{\EB}{{\mathrm{EB}}}
+\newcommand{\EBL}{{\mathrm{EB\text{-}}L}}
+\newcommand{\wmax}{w_\mathrm{max}}
+\newcommand{\infseqt}[1]{\seq{#1}{t}{1}{\infty}}
+\newcommand{\PrPl}{{\mathrm{PrPl}}}
+\newcommand{\onefone}{{_1F_1}}
+
+\newcommand{\polval}{\nu}
+\newcommand{\candpolval}{{\polval}'}
+\newcommand{\polvalt}{\widetilde{ \polval}_t}
+\newcommand{\candpolvalt}{{\polvalt}'}
+\newcommand{\poldiff}{\delta}
+\newcommand{\poldifft}{\Delta_t}
+\newcommand{\candpoldiff}{\delta'}
+\newcommand{\candpoldifft}{\Delta_t'}
+
+\newcommand{\seq}[4]{(#1)_{{#2}={#3}}^{#4}}
+\newcommand{\infseq}[2]{\seq{#1}{#2}{1}{\infty}}
+
+\newcommand{\PP}{\mathbb P}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\iwt}{w_{\obsindex}}
+\newcommand{\iwtdef}{\frac{\pol(\armrv_{\obsindex} \mid
+		\covarrv_{\obsindex})}{\histpol(\armrv_{\obsindex} \mid
+		\covarrv_{\obsindex})}}
+
 
 %%% Local Variables:
 %%% mode: latex
