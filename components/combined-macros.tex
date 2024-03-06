@@ -217,6 +217,8 @@
 \newcommand{\polhat}{\widehat{\pol}}
 \newcommand{\polhatm}{\polhat_{\epochindex}}
 \newcommand{\polhatn}{\polhat_{\asymindex}}
+\newcommand{\polhatnx}{\polhat_{\asymindex}(\covarobs)}
+\newcommand{\polhatnX}{\polhat_{\asymindex}(\covarrv)}
 \newcommand{\polhatT}{\polhat_{\maxobsindex}}
 \newcommand{\polhatt}{\polhat_{\obsindex}}
 \newcommand{\polhatnk}{\polhat_{\asymindex, \armindex}}
@@ -277,9 +279,11 @@
 \newcommand{\Zkpo}{Z_{\armindexprime 0}}
 
 \newcommand{\fkkpo}{f_{\armindex \armindexprime 0}}
+\newcommand{\betao}{\armparam_{0}}
 \newcommand{\betaok}{\armparam_{0\armindex}}
 \newcommand{\betaokp}{\armparam_{0\armindexprime }}
 \newcommand{\betakpk}{\beta_{\armindexprime \armindex}}
+\newcommand{\betahatn}{\armhat_{n}}
 \newcommand{\betahatjn}{\armhat_{jn}}
 \newcommand{\betahatkn}{\armhat_{kn}}
 \newcommand{\betahatkpn}{\armhat_{\armindexprime n}}
@@ -480,6 +484,9 @@
 \newcommand{\waldsetdef}{\left\{\mu \in \mbbR^p : \asymindex(\muhatn - \mu)^{\trans}\widehat{\Sigma}_{\asymindex}^{-1}(\muhatn - \mu)  \leq \chi_{p, 1 - \alpha}^2\right\}}
 \newcommand{\projset}{\Gamma_{\asymindex, 1 - \alpha}}
 \newcommand{\projsetdef}{\left\{\theta \in \mbbR : \theta = \maxsym_{j = 1}^p \mu_j \text{ for some } \mu \in \waldset \right\}}
+
+\newcommand{\nonregindclass}{\symcal{G}}
+\newcommand{\nonregindclassdef}{\{g(\covarrv, \armrv, \resprv; \delta) = \resprv \indfunx{\armrv \covarrv^{\trans}\delta > 0} \indfunx{\covarrv^{\trans}\armparam_0 = 0}: \delta \in \mbbR^{p} \}}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "100_main"
