@@ -465,7 +465,21 @@
 		\covarrv_{\obsindex})}{\histpol(\armrv_{\obsindex} \mid
 		\covarrv_{\obsindex})}}
 
+%%%%%
+% Non-smooth Inference
+%
+\newcommand{\argmaxset}{\symfrak{U}}
+\newcommand{\argmaxsetx}[1]{\argmaxset(#1)}
+\newcommand{\eventn}{E_{n}}
 
+\newcommand{\muhat}{\widehat{\mu}}
+\newcommand{\muhatn}{\widehat{\mu}_{\asymindex}}
+\newcommand{\muhatt}{\widehat{\mu}_{\obsindex}}
+
+\newcommand{\waldset}{\zeta_{\asymindex, 1- \alpha}}
+\newcommand{\waldsetdef}{\left\{\mu \in \mbbR^p : \asymindex(\muhatn - \mu)^{\trans}\widehat{\Sigma}_{\asymindex}^{-1}(\muhatn - \mu)  \leq \chi_{p, 1 - \alpha}^2\right\}}
+\newcommand{\projset}{\Gamma_{\asymindex, 1 - \alpha}}
+\newcommand{\projsetdef}{\left\{\theta \in \mbbR : \theta = \maxsym_{j = 1}^p \mu_j \text{ for some } \mu \in \waldset \right\}}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "100_main"
