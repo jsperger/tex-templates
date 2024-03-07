@@ -33,9 +33,11 @@
 \definedatasymbols{timevar}{V}
 \definedatasymbols{caltime}{T}
 
+\newcommand{\starsym}{\star}
+
 \newcommand{\covardist}{\symbfcal{D}_{\covarrv}}
 
-\newcommand{\pout}{\resprv^{*}}
+\newcommand{\pout}{\resprv^{\starsym}}
 \newcommand{\pouta}{\resprv^{(\armobs)}}
 
 \newcommand{\funclass}{\symbfcal{F}}
@@ -142,8 +144,8 @@
 \newcommand{\histpol}{h}
 \newcommand{\pol}{\pi}
 \newcommand{\polset}{\Pi}
-\newcommand{\optpol}{\pol^{*}}
-\newcommand{\optpolset}{\polset^{*}}
+\newcommand{\optpol}{\pol^{\starsym}}
+\newcommand{\optpolset}{\polset^{\starsym}}
 
 \newcommand{\MVN}{\mathrm{MVN}}
 
@@ -159,7 +161,7 @@
 \DeclareMathOperator{\var}{{\mathrm{Var}}}
 
 \DeclareMathOperator{\convas}{\overset{as}{\to}}
-\DeclareMathOperator{\convasstar}{\overset{as*}{\to}}
+\DeclareMathOperator{\convasstar}{\overset{as\starsym}{\to}}
 \DeclareMathOperator{\convp}{\overset{p}{\to}}
 \DeclareMathOperator{\convd}{\arrowkitsquiggapleft \arrowkitsquigheadright} %unicode-minion-math
 % \DeclareMathOperator{\convd}{\leadsto}
@@ -297,7 +299,7 @@
 
 
 \newcommand{\hkpx}{h_{\armindexprime}(\covarrv)}
-\newcommand{\hkpxstar}{h_{\armindexprime}^{*}(\covarrv)}
+\newcommand{\hkpxstar}{h_{\armindexprime}^{\starsym}(\covarrv)}
 
 \newcommand{\armhatnk}{\armhat_{\asymindex \armindex}}
 \newcommand{\armhatnkp}{\armhat_{\asymindex \armindexprime}}
@@ -451,7 +453,7 @@
 \newcommand{\onefone}{{_1F_1}}
 
 \newcommand{\polval}{\nu}
-\newcommand{\polvalopt}{\nu^{*}}
+\newcommand{\polvalopt}{\nu^{\starsym}}
 \newcommand{\candpolval}{{\polval}'}
 \newcommand{\polvalt}{\widetilde{ \polval}_t}
 \newcommand{\candpolvalt}{{\polvalt}'}
