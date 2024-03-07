@@ -430,6 +430,8 @@
 %%%%%
 % Non-asymptotic Anytime-valid Confidence Sequences
 %
+
+
 \newcommand{\history}{\mathcal{H}}
 \newcommand{\algcomment}[1]{\textcolor{darkgray}{\textit{// #1}}}
 \newcommand{\boundarysym}{\mathfrak B}
@@ -442,12 +444,14 @@
 \newcommand{\LIL}{\mathrm{LIL}}
 \newcommand{\EB}{{\mathrm{EB}}}
 \newcommand{\EBL}{{\mathrm{EB\text{-}}L}}
-\newcommand{\wmax}{w_\mathrm{max}}
+
+
 \newcommand{\infseqt}[1]{\seq{#1}{t}{1}{\infty}}
 \newcommand{\PrPl}{{\mathrm{PrPl}}}
 \newcommand{\onefone}{{_1F_1}}
 
 \newcommand{\polval}{\nu}
+\newcommand{\polvalopt}{\nu^{*}}
 \newcommand{\candpolval}{{\polval}'}
 \newcommand{\polvalt}{\widetilde{ \polval}_t}
 \newcommand{\candpolvalt}{{\polvalt}'}
@@ -464,8 +468,11 @@
 \newcommand{\EE}{\mathbb E}
 \newcommand{\NN}{\mathbb N}
 \newcommand{\ZZ}{\mathbb Z}
-\newcommand{\iwt}{w_{\obsindex}}
-\newcommand{\iwtdef}{\frac{\pol(\armrv_{\obsindex} \mid
+
+\newcommand{\impwt}{w}
+\newcommand{\impwtt}{\impwt_{\obsindex}}
+\newcommand{\wmax}{\impwt_\mathrm{max}}
+\newcommand{\impwtdef}{\frac{\pol(\armrv_{\obsindex} \mid
 		\covarrv_{\obsindex})}{\histpol(\armrv_{\obsindex} \mid
 		\covarrv_{\obsindex})}}
 
