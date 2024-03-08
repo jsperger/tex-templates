@@ -33,61 +33,16 @@
 \definedatasymbols{timevar}{V}
 \definedatasymbols{caltime}{T}
 
+%%%%
+% Magic "Constants"
+%
 \newcommand{\starsym}{\star}
 
-\newcommand{\covardist}{\symbfcal{D}_{\covarrv}}
-
-\newcommand{\pout}{\resprv^{\starsym}}
-\newcommand{\pouta}{\resprv^{(\armobs)}}
-
-\newcommand{\funclass}{\symbfcal{F}}
-\newcommand{\meanfun}{f}
-\newcommand{\meanfunvec}{\vectorsym{\meanfun}}
-\newcommand{\genericfun}{{g}}
-\newcommand{\linkfun}{{g}}
-
 \newcommand{\armparam}{\beta}
-
 \newcommand{\expresp}{\mu}
-
 \newcommand{\perfcutoff}{\delta}
-
 \newcommand{\covmat}{\Sigma}
-
 \newcommand{\err}{\epsilon}
-
-
-
-
-\newcommand{\obsindex}{t}
-\newcommand{\armindex}{k}
-\newcommand{\altarmindex}{j}
-\newcommand{\epochindex}{m}
-\newcommand{\stageindex}{s}
-
-\newcommand{\maxobsindex}{\MakeUppercase{\obsindex}}
-\newcommand{\maxarmindex}{\MakeUppercase{\armindex}}
-\newcommand{\maxepochindex}{\MakeUppercase{\epochindex}}
-\newcommand{\maxstageindex}{\MakeUppercase{\stageindex}}
-
-
-\newcommand{\clustindex}{i} \newcommand{\timeindex}{j} \newcommand{\indindex}{k}
-
-\newcommand{\maxclustindex}{\MakeUppercase{\clustindex}}
-\newcommand{\maxtimeindex}{\MakeUppercase{\timeindex}}
-\newcommand{\maxindindex}{\MakeUppercase{\indindex}}
-
-
-
-
-
-\newcommand\vectorsym[1]{\symbf{#1}}
-
-
-
-\newcommand{\dv}{\, \mathrm{d} } \newcommand{\rootn}{\sqrt{n}}
-
-\newcommand{\idmat}{\symtt{I}}
 
 % Transpose variations
 % \newcommand{\transintercal}{\interval}
@@ -99,9 +54,83 @@
 % still to try this one: \newcommand*{\tran}{^{\mkern-1.5mu\mathsf{T}}}
 \newcommand{\trans}{\top}
 
+\newcommand{\idmat}{\symtt{I}}
 \newcommand{\stdbasis}{\symtt{e}}
 \newcommand{\zerovec}{{\vectorsym{0}}}
 \newcommand{\onesvec}{\vectorsym{J}}
+
+\newcommand{\asgnpol}{\phi}
+\newcommand{\histpol}{h}
+\newcommand{\pol}{\pi}
+\newcommand{\polset}{\Pi}
+\newcommand{\optpol}{\pol^{\starsym}}
+\newcommand{\optpolset}{\polset^{\starsym}}
+
+\newcommand{\MVN}{\mathrm{MVN}}
+\newcommand{\gp}{\symbfcal{G}}
+
+\newcommand{\minimprob}{\rho}
+\newcommand{\minimweight}{\omega}
+\newcommand{\minimarmweight}{\alpha}
+\newcommand{\minimfunc}{g}
+\newcommand{\minimdim}{p}
+
+\newcommand{\teststat}{T}
+
+\newcommand{\paramvec}{\theta}
+\newcommand{\contrastmat}{L}
+\newcommand{\ncp}{\lambda}
+
+\newcommand{\confseq}{\mathcal{C}}
+\newcommand{\cset}{\symsfup{CI}}
+
+\newcommand{\rewardpred}{\widehat{r}}
+
+%%%%
+%
+%
+\newcommand{\covardist}{\symbfcal{D}_{\covarrv}}
+
+\newcommand{\pout}{\resprv^{\starsym}}
+\newcommand{\pouta}{\resprv^{(\armobs)}}
+
+\newcommand{\funclass}{\symbfcal{F}}
+\newcommand{\meanfun}{f}
+\newcommand{\meanfunvec}{\vectorsym{\meanfun}}
+\newcommand{\genericfun}{{g}}
+\newcommand{\linkfun}{{g}}
+
+
+
+%%%%
+% Indices
+%
+\newcommand{\obsindex}{t}
+\newcommand{\armindex}{k}
+\newcommand{\altarmindex}{j}
+\newcommand{\epochindex}{m}
+\newcommand{\stageindex}{s}
+\newcommand{\clustindex}{i}
+\newcommand{\timeindex}{j}
+\newcommand{\indindex}{k}
+
+\newcommand{\maxobsindex}{\MakeUppercase{\obsindex}}
+\newcommand{\maxarmindex}{\MakeUppercase{\armindex}}
+\newcommand{\maxepochindex}{\MakeUppercase{\epochindex}}
+\newcommand{\maxstageindex}{\MakeUppercase{\stageindex}}
+\newcommand{\maxclustindex}{\MakeUppercase{\clustindex}}
+\newcommand{\maxtimeindex}{\MakeUppercase{\timeindex}}
+\newcommand{\maxindindex}{\MakeUppercase{\indindex}}
+
+
+
+
+%%%%
+%
+%
+\newcommand\vectorsym[1]{\symbf{#1}}
+
+\newcommand{\dv}{\, \mathrm{d} } \newcommand{\rootn}{\sqrt{n}}
 
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
@@ -126,12 +155,14 @@
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\vect}{vec}
 
-
 \DeclareMathOperator{\bigo}{O}
 \DeclareMathOperator{\lilo}{o}
 \DeclareMathOperator{\opBase}{o_{P}}
 \newcommand{\op}[1]{\opBase(#1)}
 
+%%%%
+% Programatically generate script, blackboard, and upright sans face shortcuts for every letter
+%
 \def\do#1{\expandafter\gdef\csname mc#1\endcsname{{\symcal{#1}}}\expandafter\gdef\csname mbb#1\endcsname{{\symbb{#1}}}\expandafter\gdef\csname msf#1\endcsname{{\symsfup{#1}}}}
 
 \docsvlist{A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z}
@@ -139,17 +170,6 @@
 
 \newcommand{\indp}{\perp}
 \newcommand{\condindp}{\mathrel{\text{\scalebox{1.07}{$\perp\mkern-10mu\perp$}}}}
-
-\newcommand{\asgnpol}{\phi}
-\newcommand{\histpol}{h}
-\newcommand{\pol}{\pi}
-\newcommand{\polset}{\Pi}
-\newcommand{\optpol}{\pol^{\starsym}}
-\newcommand{\optpolset}{\polset^{\starsym}}
-
-\newcommand{\MVN}{\mathrm{MVN}}
-
-\newcommand{\gp}{\symbfcal{G}}
 
 
 
@@ -182,25 +202,17 @@
 \DeclareMathOperator{\BR}{BR} \DeclareMathOperator{\R}{\mathrm{R}} \DeclareMathOperator{\Reg}{\mathrm{Reg}} \DeclareMathOperator{\Regpop}{\mathrm{Reg^{pop}}} %
 
 
-\newcommand{\minimprob}{\rho}
-\newcommand{\minimweight}{\omega}
-\newcommand{\minimarmweight}{\alpha}
-\newcommand{\minimfunc}{g}
-\newcommand{\minimdim}{p}
 
-\newcommand{\teststat}{T}
 \newcommand{\teststatvec}{\symbf{\teststat}}
 \newcommand{\teststatvecn}{\symbf{\teststat}_{\asymindex}}
 \newcommand{\teststatn}{\teststat_{\asymindex}}
 \newcommand{\teststatnk}{\teststat_{\asymindex \armindex}}
 
-\newcommand{\paramvec}{\theta}
 \newcommand{\ijk}{\clustindex \timeindex \indindex}
-\newcommand{\contrastmat}{L}
-\newcommand{\ncp}{\lambda}
 
-
-
+%%%%
+% Shorthand macros & alt names
+%
 \newcommand{\X}{\covarrv} \newcommand{\x}{\covarobs} \newcommand{\Xt}{\covarrv^{\trans}} \newcommand{\xt}{\covarobs^{\trans}} \newcommand{\Y}{\resprv} \newcommand{\y}{\respobs}
 \newcommand{\kp}{\armindex^{\prime}}
 
@@ -364,8 +376,7 @@
 
 \newcommand{\mkbodef}{\maxkpind{\covarrv^{\trans} \left(\armparam_{0\armindex} - \armparam_{0\armindexprime} \right) > 0}\covarrv^{\trans}\armparamk}
 
-\newcommand{\confseq}{\mathcal{C}}
-\newcommand{\cset}{\symsfup{CI}}
+
 \newcommand{\cseq}{\confseq}
 \newcommand{\csm}{\confseq_m}
 \newcommand{\csma}{\confseq_{m, 1-\alpha}}
@@ -477,6 +488,19 @@
 \newcommand{\impwtdef}{\frac{\pol(\armrv_{\obsindex} \mid
 		\covarrv_{\obsindex})}{\histpol(\armrv_{\obsindex} \mid
 		\covarrv_{\obsindex})}}
+
+%%%%
+% Definitions that get re-used
+%
+
+\newcommand{\valfundef}{\E_{\covarrv}[\poout(\polhatnx) \mid \polhatnx]}
+\newcommand{\valfunexpdef}{\E_{\covarrv}[\poout(\polhatnx) ]}
+\newcommand{\valfunoptdef}{\E_{\covarrv}[\poout(\polopt) ; \polopt]}
+\newcommand{\valfunfixeddef}{\E_{\covarrv}[\poout(\pol^{\text{fixed}}) ; \pol^{\text{fixed}}]}
+\newcommand{\valfundefop}{\Pop \poout(\polhatnx)}
+
+\newcommand{\ipwdef}{\frac{\resprv(\armobs, \covarobs)}{\histpol(\armobs \mid \covarobs)}}
+\newcommand{\aipwdef}{\histpol(\armobs \mid \covarobs)\resprv(\armobs, \covarobs)\rewardpred - (1 - )}
 
 %%%%%
 % Non-smooth Inference
