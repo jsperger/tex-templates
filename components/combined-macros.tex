@@ -197,6 +197,7 @@
 
 \newcommand{\valhat}{{\widehat{\val}}}
 \newcommand{\valhatn}{\valhat_{\asymindex}}
+\newcommand{\valhatt}{\valhat_{\obsindex}}
 \newcommand{\valhatm}{{\widehat{\val}}_{\epochindex}}
 
 \DeclareMathOperator{\BR}{BR} \DeclareMathOperator{\R}{\mathrm{R}} \DeclareMathOperator{\Reg}{\mathrm{Reg}} \DeclareMathOperator{\Regpop}{\mathrm{Reg^{pop}}} %
@@ -493,11 +494,11 @@
 % Definitions that get re-used
 %
 
-\newcommand{\valfundef}{\E_{\covarrv}[\poout(\polhatnx) \mid \polhatnx]}
-\newcommand{\valfunexpdef}{\E_{\covarrv}[\poout(\polhatnx) ]}
-\newcommand{\valfunoptdef}{\E_{\covarrv}[\poout(\polopt) ; \polopt]}
-\newcommand{\valfunfixeddef}{\E_{\covarrv}[\poout(\pol^{\text{fixed}}) ; \pol^{\text{fixed}}]}
-\newcommand{\valfundefop}{\Pop \poout(\polhatnx)}
+\newcommand{\valfundef}{\E_{\covarrv}[\pout(\polhatnx) \mid \polhatnx]}
+\newcommand{\valfunexpdef}{\E_{\covarrv}[\pout(\polhatnx) ]}
+\newcommand{\valfunoptdef}{\E_{\covarrv}[\pout(\polopt) ; \polopt]}
+\newcommand{\valfunfixeddef}{\E_{\covarrv}[\pout(\pol^{\text{fixed}}) ; \pol^{\text{fixed}}]}
+\newcommand{\valfundefop}{\Pop \pout(\polhatnx)}
 
 \newcommand{\ipwdef}{\frac{\resprv(\armobs, \covarobs)}{\histpol(\armobs \mid \covarobs)}}
 \newcommand{\aipwdef}{\histpol(\armobs \mid \covarobs)\resprv(\armobs, \covarobs)\rewardpred - (1 - )}
