@@ -494,7 +494,7 @@
 % Definitions that get re-used
 %
 
-\newcommand{\valfundef}{\E_{\covarrv}[\pout(\polhatnx) \mid \polhatnx]}
+\newcommand{\valfundef}{\E[\pout(\polhatnx) \mid \polhatnx]}
 \newcommand{\valfunexpdef}{\E[\pout(\polhatnx) ]}
 \newcommand{\valfunoptdef}{\E[\pout(\polopt) ; \polopt]}
 \newcommand{\valfunfixeddef}{\E[\pout(\pol^{\text{fixed}}) ; \pol^{\text{fixed}}]}
@@ -513,6 +513,12 @@
 \newcommand{\muhat}{\widehat{\mu}}
 \newcommand{\muhatn}{\widehat{\mu}_{\asymindex}}
 \newcommand{\muhatt}{\widehat{\mu}_{\obsindex}}
+
+\newcommand{\thetahat}{\widehat{\theta}}
+\newcommand{\thetahatn}{\widehat{\theta}_{\asymindex}}
+\newcommand{\thetahatt}{\widehat{\theta}_{\obsindex}}
+
+
 
 \newcommand{\waldset}{\zeta_{\asymindex, 1- \alpha}}
 \newcommand{\waldsetdef}{\left\{\mu \in \mbbR^p : \asymindex(\muhatn - \mu)^{\trans}\widehat{\Sigma}_{\asymindex}^{-1}(\muhatn - \mu)  \leq \chi_{p, 1 - \alpha}^2\right\}}
