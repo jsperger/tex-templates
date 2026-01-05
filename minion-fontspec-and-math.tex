@@ -1,0 +1,50 @@
+% Preamble for using Minion 3 & Minion Math in lualatex
+%
+% Packages declared: fontspec, unicode-math, and microtype
+% IIRC order matters for these packages and for them with amsmath,
+% and amsmath should come before everything here
+\usepackage{fontspec}
+\setmainfont{Minion3}
+
+\usepackage{components/lua-unicode-minionmath}
+\usepackage[math-style=TeX]{unicode-math}
+\setmathfont[
+	Extension = .otf,
+	Scale = 1,
+	Script = Math,
+	SizeFeatures = {
+			{Size = -7.2, Font = MinionMath-Tiny,
+					Style = MathScriptScript},
+			{Size = 7.2-10.0, Font = MinionMath-Capt,
+					Style = MathScript},
+			{Size = 10.0-, Font = MinionMath-Regular},
+		}]{MinionMath-Regular}
+\setmathfont[
+	Extension = .otf,
+	Scale = .9,
+	Script = Math,
+	SizeFeatures = {
+			{Size = -6.0, Font = MinionMath-Tiny,
+					Style = MathScriptScript},
+			{Size = 6.0-9.0, Font = MinionMath-Capt,
+					Style = MathScript},
+			{Size = 9.0-, Font = MinionMath-Regular},
+		}]{MinionMath-Regular}
+% style ref
+% up , it , bb , bbit , scr , cal , bfcal , frak , tt , sfup ,
+% sfit , bfup , bfit , bfscr , bffrak , bfsfup , bfsfit
+\setmathfont{MinionMath-Bold}[range={bfup->up,bfit->it}]
+\setmathfont{MinionMath-Regular}[range={"F0000-"FFFFF}]
+\setmathfont{Euler Math}[Scale = MatchUppercase,
+	range={cal, bfcal, frak,bffrak}]
+\setmathfont{STIX Two Math}[Scale = MatchUppercase,
+	range={scr, bfscr, bfsfup, bfsfit}]
+\setmathfont{STIX Two Math}[Scale = .8,
+	range={tt}]
+\setmathfont{FiraMath-Regular}[Scale = 1.2,
+	range={sfup, sfit}]
+\setmathfont{FiraMath-Bold}[Scale = 1.2,
+	range={bfsfup, bfsfit}]
+\setmathfont[range={}]{MinionMath-Regular.otf}
+
+\usepackage{microtype}
